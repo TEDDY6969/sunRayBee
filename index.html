@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- HTML Meta Tags -->
+  <title id="title">Its Magic</title>
+  <meta name="description" content="Yo! Itz me Priyansh.">
+  <meta name="theme-color" content="#000">
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="Teri Mummy Meri Hoja">
+  <meta itemprop="description" content="Ab to ho gyi bhai papa bol pagal!">
+  <meta itemprop="image" content="image.jpeg">
+
+  <!-- Facebook Meta Tags -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Teri Mummy Meri Hoja">
+  <meta property="og:description" content="Ab to ho gyi bhai papa bol pagal!">
+  <meta property="og:image" content="image.jpeg">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Teri Mummy Meri Hoja">
+  <meta name="twitter:description" content="Ab to ho gyi bhai papa bol pagal!">
+  <meta name="twitter:image" content="image.jpeg">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="image.jpeg">
+
+
+  <style>
+    /* Add some styles to make the page look nice */
+    body {
+      margin: 0;
+      padding: 0;
+      display: ; flex;
+      background-color: #000;
+      color: #fff;
+      font-family: sans-serif;
+      align-items: center;
+    justify-content: center;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 3em;
+    }
+    p {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 1.5em;
+    }
+   #idk {
+      margin: 10vw;
+      padding: 20px;
+      display: flex;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-family: sans-serif;
+      background-color: red;
+      align-items: center;
+    justify-content: center;
+    }
+    #play-button {
+      display: flex;
+      padding: 11px;
+      font-size: 1.5em;
+      border: none;
+      background-color: violet;
+      color: #fff;
+      cursor: pointer;
+    }
+    /* Style the video element */
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div id="idk">
+  <button id="play-button">Tap to see the magic</button>
+  </div>
+  <div id="video-container">
+    <video id="my-video" src="my-video.mp4"></video>
+  </div>
+  <script>
+    document.getElementById("video-container").style.display = "none";
+
+
+    document.getElementById("play-button").addEventListener("click", function() {
+      
+document.getElementById('title').innerHtml = "Teri Mummy Meri Ho Gyi";
+      document.getElementById("video-container").style.display = "block";
+document.getElementById("play-button").style.display = "none";
+      // Make the video element full-screen
+      var video = document.getElementById("my-video");
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.mozRequestFullScreen) {
+        video.mozRequestFullScreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      }
+      video.play();
+    });
+  </script>
+</body>
+</html>
